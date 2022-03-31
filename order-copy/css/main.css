@@ -1,0 +1,42 @@
+body {
+	width: 800px;
+	height: 900px;
+	background-color: #f8f6f3;
+	padding: 10px;
+	font-size: 18px;
+	overflow: auto;
+	margin: 5px 5px 10px 5px;
+	border: 2px 0px 0px 2px dashed #627686;
+}
+
+.table {
+	min-width: 1700px;
+}
+
+#msg {
+	width: 400px;
+}
+
+#tips {
+	color: #000;
+	text-align: center;
+}
+
+#tips div span {
+	margin: 5px 5px;
+}
+
+#copyit {
+	margin: 5px 5px;
+	display: none;
+}
+
+table tr {
+	margin: 3px;
+}
+
+tr td {
+	padding: 2px;
+	/*margin: 1px;*/
+	border: 1px solid #627686;
+}

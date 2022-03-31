@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "抖店订单一键复制",
+  "description": "助你一键快速复制抖店订单页下解码后的收件人信息。无后台通讯功能，数据无外泄风险。",
+  "version": "1.0.0",
+  "icons": {
+    "16": "img/fxg.png",
+    "48": "img/fxg.png"
+  },
+  "browser_action": {
+    "default_icocn": "img/fxg.png",
+    "default_title": "抖店订单一键复制小工具",
+    "default_popup": "order-popup.html",
+    "matches": [
+        "https://fxg.jinritemai.com/*"
+      ]
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "https://*/"
+  ]
+  ,
+  "content_scripts": [
+    {
+      "matches": [
+        "https://fxg.jinritemai.com/*"
+      ],
+      "js": [
+        "js/jquery.min.js",
+        "js/order-index.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
