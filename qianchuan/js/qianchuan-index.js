@@ -80,8 +80,7 @@ function sendWxMsg(obj) {
 				if (preCost > 0) {
 					obj['销售金额'] = preCost;
 				}
-				// $.get('https://ad.uniscrm.cn/app/text', {'agentId': 1000006, 'content': dataFormat(obj)}, function(data, status){
-    // 			});
+	
     			chrome.runtime.sendMessage({'wx': true, content: dataFormat(obj)}, function(response) {
 					// alert('发送成功' + response);
 				});
