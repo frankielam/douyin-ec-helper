@@ -30,6 +30,7 @@ const HEADER_MAP = {
 
 function callback(msg) {
     $('#copyit').show();
+    $('#exportcsv').show();
     var html = '<table id="order" class="table table-bordered">';
     for (var i = 0; i < msg.length; i++) {
         if (i == 0) {
@@ -153,5 +154,7 @@ function fillTextArea(msg) {
         $('#tips').append(JSON.stringify(info).replace('mosaic', '姓名隐藏订单数数'));
         $('#text').hide();
     })
+
+    exportBinding()
 
 })();
