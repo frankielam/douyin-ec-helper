@@ -2,7 +2,6 @@ let TIP = '';
 let preObj = {'展示次数': 1};
 let preCost = 0;
 function updateDate() {
-	
 	if (document.location.host.indexOf('compass.') >= 0 && document.location.pathname === '/screen/live/shop') {
 		// preCost = $('#root .odometer-value').text();
 		// alert($('#root .odometer-value').text());
@@ -71,7 +70,7 @@ function genData() {
 
 function sendWxMsg(obj) {
 	if (preObj['展示次数']) {
-			// alert(preCost);
+			obj['名称'] = $('.shop-name').text()
 			if (parseInt(obj['展示次数']) >0 || parseInt(obj['展示次数']) - parseInt(preObj['展示次数']) > 5000 
 				|| parseInt(obj['新增粉丝数']) - parseInt(preObj['新增粉丝数']) > 10 
 				|| obj['平均千次展现费用(元)'] != preObj['平均千次展现费用(元)'])  {
@@ -90,7 +89,7 @@ function sendWxMsg(obj) {
 }
 
 
-const data_col = ["消耗(元)", "展示次数", "平均千次展现费用(元)", "点击次数", "点击率", "新增粉丝数", "直播间超过1分钟观看人次", "直播间商品点击次数", "直接成交金额(元)", "间接成交金额", "update", "销售金额"];
+const data_col = ["消耗(元)", "展示次数", "平均千次展现费用(元)", "点击次数", "点击率", "新增粉丝数", "直播间超过1分钟观看人次", "直播间商品点击次数", "直接成交金额(元)", "间接成交金额", "名称", "update", "销售金额"];
 function dataFormat(obj) {
 	let str = '';
 	data_col.forEach(item => {
